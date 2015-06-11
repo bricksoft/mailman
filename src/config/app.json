@@ -1,0 +1,18 @@
+{
+	"logfile":"$__src__log__app.log",
+	
+	"interfaces":{
+		"database" : [
+			"App\\Interfaces\\database\\mysql",
+			"App\\Interfaces\\database\\pdo"
+		],
+		
+		"mail" 	: [
+			"App\\Interfaces\\mail\\smtp"
+		],
+		
+		"synchronisation" 	: [
+			"App\\Interfaces\\synchronisation\\relay"
+		]
+	}
+}

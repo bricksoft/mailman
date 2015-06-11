@@ -1,0 +1,16 @@
+{
+	"logfile":"$__src__log__twig.log",
+	"view_dir":"$__src__view",
+	
+	"template_dir":"$__src__view__templates",
+	"loader_params":{
+		"debug":true,	
+		"charset":"utf-8",
+		"@base_template_class":"base_template.twig",
+		"cache":"$__src__view__cache",
+		"auto_reload":true,
+		"strict_variables":true,
+		"autoescape":true,
+		"optimizations":0
+	}
+}

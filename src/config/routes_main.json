@@ -1,0 +1,8 @@
+{
+	"routes":[
+		{"route":"/","template":"foo.twig"},
+		{"route":"/1","template":"foo.twig"},
+		{"route":"/2","template":"foo.twig"},
+		{"route":"/3","template":"foo.twig"}
+	]
+}

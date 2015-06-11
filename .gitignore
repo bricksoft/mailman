@@ -1,0 +1,6 @@
+/vendor
+/composer.lock
+/composer.phar
+/src/log/*
+!vendor/autoload.php
+!vendor/autoload_custom.php

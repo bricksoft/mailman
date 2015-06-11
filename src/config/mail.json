@@ -1,0 +1,7 @@
+{
+	"host_smtp":"",
+	"port":"",
+	"user_smtp":"",
+	"password_smtp":"",
+	"logfile":"$__src__log__mail.log"
+}
