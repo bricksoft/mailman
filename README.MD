@@ -5,22 +5,22 @@ It is written in PHP and JSON(Configuration-Files)
 ## Features
 - Object oriented
 - Configuration in JSON
-- Namespaced Autoloading
+- Namespaced Autoloading | running aside composer's Autoloader
 - Platform independent: Paths are using PHP Constants [DIRECTORY_SEPARATOR, etc]
 
 ##Status:
 ###Ready to use
 - Autoloader (including Error-Log)
-- Custom Errors
+- Custom Error-Handler
 - Configurator (Json-Parsing, Configuration-Parsing)
 - [Twig](http://twig.sensiolabs.org/ "Twig Homepage") (use templates by issuing "$app->view->render($fil[,$parameters=array()])")
+- [SLIM](http://www.slimframework.com/ "SLIM Framework") (for routing)
 
 ###Work in Progress
 - Improvements in OOP
 - Database
 - SMTP
 - [Symfony](https://symfony.com/ "Symfony Framework")(for Web-Frontend [using components])
-- [SLIM](http://www.slimframework.com/ "SLIM Framework") integration (for [routing](http://akrabat.com/routing-to-a-controller-with-slim-framework-2/ "SLIM Controller wrapper"))
 
 ###How to Use
 1. clone this repository
@@ -28,10 +28,14 @@ It is written in PHP and JSON(Configuration-Files)
 3. in the root-Directory do composer install
 4. configure your webroot to /web
 
+********************************************
+Installation-Script for apache2 coming soon!
+********************************************
+
 ###Volume of this project:
 ####Output of cloc
 
-	C:\www>cloc www
+    C:\www>cloc www
 		2944 text files.
 		2854 unique files.
 		995 files ignored.
