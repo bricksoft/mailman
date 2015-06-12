@@ -1,7 +1,7 @@
 <?php
 
 /* Require and initialize Autoloader */
-require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload_custom.php';
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'autoload_custom.php';
 
 /* Require and initialize Core App */
 global $app;

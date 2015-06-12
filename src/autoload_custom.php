@@ -1,14 +1,12 @@
 <?php
     namespace vendor;
-    require __DIR__ . DIRECTORY_SEPARATOR . 'autoload.php';
     
     class autoload_custom
     {
         const FILE_EXTENSION = '.php';
         public static function register()
         {
-            global $app;
-            isset($app->debugbar)?$app->debugbar["messages"]->addMessage("hello world!"):null;
+			require BASE_DIR . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . 'autoload.php';
             spl_autoload_register(array(
                 __CLASS__,
                 'load'
