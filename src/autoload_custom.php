@@ -6,7 +6,7 @@
         const FILE_EXTENSION = '.php';
         public static function register()
         {
-			require BASE_DIR . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . 'autoload.php';
+			require BASE_DIR . DIRECTORY_SEPARATOR . "vendor" . DIRECTORY_SEPARATOR . 'autoload.php';
             spl_autoload_register(array(
                 __CLASS__,
                 'load'
