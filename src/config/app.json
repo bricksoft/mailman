@@ -3,16 +3,16 @@
 	
 	"interfaces":{
 		"database" : [
-			"App\\Interfaces\\database\\mysql",
-			"App\\Interfaces\\database\\pdo"
+			"App\\Interfaces\\Database\\mysql",
+			"App\\Interfaces\\Database\\pdo"
 		],
 		
 		"mail" 	: [
-			"App\\Interfaces\\mail\\smtp"
+			"App\\Interfaces\\Mail\\smtp"
 		],
 		
 		"synchronisation" 	: [
-			"App\\Interfaces\\synchronisation\\relay"
+			"App\\Interfaces\\Synchronisation\\relay"
 		]
 	}
 }
