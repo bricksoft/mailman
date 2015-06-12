@@ -1,10 +1,5 @@
 {
 	"routes":[
-		{"route":"/special/1","template":"foo.twig"},
-		{"route":"/special/2","template":"foo.twig"},
-		{"route":"/special/3","template":"foo.twig"},
-		{"route":"/special/4","template":"foo.twig"},
-		{"route":"/special/5","template":"foo.twig"},
-		{"route":"/special/6","template":"foo.twig"}
+		{"route":"/debug","template":"foo.twig"}
 	]
 }

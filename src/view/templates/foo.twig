@@ -1,3 +1,6 @@
+{% extends "debug.twig" %}
+
+{% block display %}
 Hello {{user}}!<br>
 Your details are:<br>
 <ul>
@@ -6,3 +9,4 @@ Your details are:<br>
 	<li>ID: {{user_id}}</li>
 	<li>Challenge: {{user_challenge}}</li>
 </ul>
+{% endblock %}

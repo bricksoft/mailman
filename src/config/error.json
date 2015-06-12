@@ -1,6 +1,6 @@
 {
 	"logfile":"$__src__log__error.log",
 	"save_notice":false,
-	"show_notice":false,
+	"show_notice":true,
 	"show_error":true
 }

@@ -1,27 +1,33 @@
 <?php
-	
 
-	//Including autoloader
-	require dirname(__DIR__).DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload_custom.php';
-	
-	$app = new \App\app();
-	/* Require and initialize Slim and Twig */
-	$slim = \App\handlers\slim::get_instance();
-	
-	$app->addInterface("database",1);
-	$foo= $app->user->create_from_array($app->database->select("users",array("name","Foo Bar"))[0],"password");
-	
-	/* Application routes */
-	\App\handlers\slim::apply_routes($foo->get_array());
-	
-	/* Run the application */
-	$slim->run();
-	
-	// -----------------------------
-	# debug - area
-	#var_dump($user);
-	#var_dump($app);
-	// -----------------------------
+/* Require and initialize Autoloader */
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload_custom.php';
+
+/* Require and initialize Core App */
+global $app;
+$app = new \App\app();
+
+/* Require and initialize Debugbar Debugger */
+new \App\handlers\debugbar();
+
+/* Require and initialize Slim and Twig */
+\App\handlers\slim::init();
+
+$useract = new \App\testing\useraction();
+
+
+/* Preparing twig data */
+$data = $useract->foo->get_array();
+
+/* Application routes */
+#\App\handlers\slim::apply_routes($useract->foo->get_array());
+\App\handlers\slim::apply_routes($data);
+
+/* Run the application */
+$slim->run();
+// -----------------------------
+# debug - area
+#var_dump($user);
+#var_dump($app);
+// -----------------------------
 ?>
-
-

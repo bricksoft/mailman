@@ -5,7 +5,7 @@
 	class app extends handlers\configurator {
 		private $config;
 		public $user;
-		
+		public $debugbar;
 		function init($config){$this->config = $config;}
 		
 		function __construct(){

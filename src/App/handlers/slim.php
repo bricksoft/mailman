@@ -2,20 +2,23 @@
 	//twig class (easier implementation of twig)
 	namespace App\handlers;
 	class slim {
-		private static $instance;
-		public static function get_instance(){
-			$app = new \Slim\Slim(array(
+		public static function init(){
+			global $slim;
+			global $app;
+			$app->debugbar["messages"]->addMessage(__CLASS__.' initialized');
+			$slim = new \Slim\Slim(array(
     			'view' => new \Slim\Views\Twig()
 			));
-			$app->view->setTemplatesDirectory(
+			$slim->view->setTemplatesDirectory(
 				(new \App\handlers\twig())->config->template_dir
 			);
-			self::$instance = $app;
-			return $app;
 		}
 		public static function apply_routes($data){
-			new \App\routes\main($data, self::$instance);
-			new \App\routes\special($data, self::$instance);
+			global $app, $slim;
+			$data["debugHead"] = $app->debugbar->render->renderHead();
+			$data["debugBody"] = $app->debugbar->render->render();
+			new \App\routes\main($data, $slim);
+			new \App\routes\special($data, $slim);
 		}
 	}
 ?>

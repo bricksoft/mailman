@@ -27,8 +27,11 @@
 		}
 	}
 	class _user{
+		
 		private $model;
 		function __construct($model){
+			global $app;	
+			isset($app)?$app->debugbar["messages"]->addMessage(__CLASS__.' created'):null; 
 			$this->model = $model;
 		}
 		public function get_user_name(){

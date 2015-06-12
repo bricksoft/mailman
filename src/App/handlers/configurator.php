@@ -8,6 +8,10 @@
 		
 		private $config;
 		function __construct($override=""){
+			global $app;			
+			if(isset($app->debugbar)){
+				$app->debugbar["messages"]->addMessage(__CLASS__.' used');
+			}
 			if (empty($override)){
 				// determining the child which was calling the configurator
 				$child = new \ReflectionClass(get_called_class());
